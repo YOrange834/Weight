@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CA4CDC427BE4AEB00B26302 /* YOWeightOtherLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4CDC327BE4AEB00B26302 /* YOWeightOtherLine.swift */; };
 		7CA5C728277C8F9C0068DC06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C727277C8F9C0068DC06 /* AppDelegate.swift */; };
 		7CA5C72A277C8F9C0068DC06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C729277C8F9C0068DC06 /* SceneDelegate.swift */; };
 		7CA5C72C277C8F9C0068DC06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C72B277C8F9C0068DC06 /* ViewController.swift */; };
@@ -16,9 +17,11 @@
 		7CA5C73D277C8FC80068DC06 /* YOWightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C73C277C8FC80068DC06 /* YOWightView.swift */; };
 		7CA5C73F277C90080068DC06 /* YOWeightLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C73E277C90080068DC06 /* YOWeightLineView.swift */; };
 		7CA5C742277C96B80068DC06 /* YOWeightLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5C741277C96B80068DC06 /* YOWeightLineCollectionViewCell.swift */; };
+		7CBC17FA27BD0AF700642176 /* YOWeightDrawLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBC17F927BD0AF700642176 /* YOWeightDrawLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CA4CDC327BE4AEB00B26302 /* YOWeightOtherLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOWeightOtherLine.swift; sourceTree = "<group>"; };
 		7CA5C724277C8F9C0068DC06 /* YOWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YOWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA5C727277C8F9C0068DC06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CA5C729277C8F9C0068DC06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		7CA5C73C277C8FC80068DC06 /* YOWightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOWightView.swift; sourceTree = "<group>"; };
 		7CA5C73E277C90080068DC06 /* YOWeightLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOWeightLineView.swift; sourceTree = "<group>"; };
 		7CA5C741277C96B80068DC06 /* YOWeightLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOWeightLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		7CBC17F927BD0AF700642176 /* YOWeightDrawLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOWeightDrawLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			children = (
 				7CA5C73E277C90080068DC06 /* YOWeightLineView.swift */,
 				7CA5C741277C96B80068DC06 /* YOWeightLineCollectionViewCell.swift */,
+				7CBC17F927BD0AF700642176 /* YOWeightDrawLineView.swift */,
+				7CA4CDC327BE4AEB00B26302 /* YOWeightOtherLine.swift */,
 			);
 			path = LineView;
 			sourceTree = "<group>";
@@ -163,9 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CBC17FA27BD0AF700642176 /* YOWeightDrawLineView.swift in Sources */,
 				7CA5C72C277C8F9C0068DC06 /* ViewController.swift in Sources */,
 				7CA5C728277C8F9C0068DC06 /* AppDelegate.swift in Sources */,
 				7CA5C73D277C8FC80068DC06 /* YOWightView.swift in Sources */,
+				7CA4CDC427BE4AEB00B26302 /* YOWeightOtherLine.swift in Sources */,
 				7CA5C72A277C8F9C0068DC06 /* SceneDelegate.swift in Sources */,
 				7CA5C742277C96B80068DC06 /* YOWeightLineCollectionViewCell.swift in Sources */,
 				7CA5C73F277C90080068DC06 /* YOWeightLineView.swift in Sources */,
