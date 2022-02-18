@@ -11,9 +11,6 @@ class YOWeightLineView: UIView {
     /// 体重视图
     private let collectionView: UICollectionView
     
-    /// 体重视图
-    private let otherLineView: YOWeightOtherLine
-    
     ///
     private let layout: UICollectionViewFlowLayout
     /// 体重数据
@@ -33,11 +30,6 @@ class YOWeightLineView: UIView {
     override init(frame: CGRect) {
         layout = UICollectionViewFlowLayout()
         collectionView = UICollectionView(frame: CGRect(origin: CGPoint.zero, size: frame.size), collectionViewLayout: layout)
-        
-        otherLineView = YOWeightOtherLine(frame: CGRect(origin: CGPoint.zero, size: frame.size))
-        otherLineView.backgroundColor = UIColor.clear
-        otherLineView.isUserInteractionEnabled = false
-        
         super.init(frame: frame)
         self.backgroundColor = UIColor.gray
     }
@@ -49,7 +41,6 @@ class YOWeightLineView: UIView {
     
     func configUI(){
         addSubview(collectionView)
-        addSubview(otherLineView)
         
         layout.itemSize = CGSize(width: lineParModel.gridWidth, height: self.frame.size.height)
         layout.minimumLineSpacing = 0
@@ -76,22 +67,11 @@ extension YOWeightLineView{
     
     /// 刷新数据
     func refreshData(_ data: Array<Double>?){
-        if data != nil{
+        if data == nil{
             dataArr = data!
         }
         collectionView.reloadData()
     }
-    
-    /// 刷新数据
-    func refreshCenterLine(){
-        otherLineView.refreshCenterLine()
-    }
-    
-    /// 刷新数据
-    func refreshAvageLine(_ value: Double){
-        otherLineView.refreshAvageLine(value)
-    }
-    
 }
 
 

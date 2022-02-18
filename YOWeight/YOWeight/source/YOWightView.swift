@@ -11,10 +11,8 @@ class YOWightView: UIView {
     /// 体重视图
     private var wightLineView: YOWeightLineView!
         
-    /// 平均体重线
-    private let avargerLineView = CAShapeLayer()
-    /// 当前体重线【中间线】
-    private let currentLineView = CAShapeLayer()
+    /// 中间线和平均线设置
+    private var otherLineView: YOWeightOtherLine!
     
     /// 体重数据
     private var dataArr: Array<Double> = []
@@ -30,32 +28,44 @@ class YOWightView: UIView {
     
     
     private func configUI(){
-        
+        /// 初始化曲线图
         wightLineView = YOWeightLineView(frame: self.bounds)
         addSubview(wightLineView)
-        wightLineView.frame = self.bounds
-        
         wightLineView.lineParModel = YOWightLineParameter()
         wightLineView.otherLineParModel = YOWightOtherLineParameter()
         
         wightLineView.configUI()
-        wightLineView.refreshCenterLine()
+        
+        /// 初始化中线和平均线
+        otherLineView = YOWeightOtherLine(frame: self.bounds)
+        addSubview(otherLineView)
+        otherLineView.backgroundColor = UIColor.clear
+        otherLineView.isUserInteractionEnabled = false
+        otherLineView.refreshCenterLine()
     }
     
+}
+
+
+extension YOWightView{
+    /// 刷新数据
     func refreshData(_ data: Array<Double>?){
         if data != nil{
             dataArr = data!
+            
+            // TODO : 需要找出最大值和最小值，让数据区域中间的数据 ，同时修改平均值
+            
+            
+            let min = data!.min()
+            let max = data!.max()
         }
         wightLineView.refreshData(dataArr)
+    }
         
-    }
-    
-    /// 刷新数据
+    /// 刷新目标线
     func refreshAvageLine(_ value: Double){
-        wightLineView.refreshAvageLine(value)
+        otherLineView.refreshAvageLine(value)
     }
-    
-    
 }
 
 

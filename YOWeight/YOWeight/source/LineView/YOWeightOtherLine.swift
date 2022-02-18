@@ -45,6 +45,11 @@ class YOWeightOtherLine: UIView {
     
     func refreshAvageLine(_ value: Double){
         
+        averageLineLayer.removeFromSuperlayer()
+        if value <= 0.0 {
+            return
+        }
+        
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 0, y: value))
         path.addLine(to: CGPoint(x: self.frame.width,y: value))
