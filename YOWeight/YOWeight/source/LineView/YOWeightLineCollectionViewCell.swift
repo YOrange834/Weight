@@ -12,19 +12,10 @@ class YOWeightLineCollectionViewCell: UICollectionViewCell {
     let lineView = YOWeightDrawLineView()
     var lineParModel: YOWightLineParameter?
 
-    let lab = UILabel()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        
         lineView.frame = self.bounds
-        
-        lab.frame = CGRect(x: 0, y: 0, width: 50, height: 10)
         self.contentView.transform = CGAffineTransform(rotationAngle: -Double.pi)
-
-        self.contentView.addSubview(lab)
-        
         self.contentView.addSubview(lineView)
     }
     
@@ -37,7 +28,9 @@ class YOWeightLineCollectionViewCell: UICollectionViewCell {
         lineView.reloadView(nowCenterY, beforeCenterY: beforeCenterY)
     }
     
-    
+    func showInnerCircle(_ show: Bool){
+        lineView.innerCircleLayer.isHidden = !show
+    }
     
     
 }

@@ -12,7 +12,7 @@ class YOWeightDrawLineView: UIView {
     /// 外圆
     private let outerCircleLayer: CAShapeLayer
     /// 内圆
-    private let innerCircleLayer: CAShapeLayer
+    let innerCircleLayer: CAShapeLayer
     /// 连接线
     private let lineLayer: CAShapeLayer
     
@@ -47,7 +47,7 @@ class YOWeightDrawLineView: UIView {
     func reloadView(_ nowCenterY: Double, beforeCenterY: Double){
         assert(lineParModel != nil, "请先设置参数")
         
-        let centerX = self.frame.size.width - lineParModel!.outerCircleRadius - lineParModel!.ourerCircleWidth / 2
+        let centerX = self.frame.size.width - lineParModel!.outerCircleRadius - lineParModel!.outerCircleWidth / 2
         
         innerCircleLayer.removeFromSuperlayer()
         outerCircleLayer.removeFromSuperlayer()
@@ -83,7 +83,7 @@ class YOWeightDrawLineView: UIView {
 
         path.addArc(withCenter: CGPoint(x: centerX, y: centerY), radius: lineParModel!.outerCircleRadius, startAngle: 0, endAngle: 2*CGFloat(Double.pi), clockwise: true)
         
-        outerCircleLayer.lineWidth = lineParModel!.ourerCircleWidth
+        outerCircleLayer.lineWidth = lineParModel!.outerCircleWidth
         outerCircleLayer.strokeColor = lineParModel!.outCircleColor.cgColor
         outerCircleLayer.path = path.cgPath
         outerCircleLayer.fillColor = nil
@@ -124,7 +124,7 @@ class YOWeightDrawLineView: UIView {
         let startPoint = CGPoint(x: 0, y: beforeCenterY)
             
         /// 计算二次贝塞尔曲线的控制点
-        let endPointX = self.frame.size.width - lineParModel!.outerCircleRadius * 2 - lineParModel!.ourerCircleWidth
+        let endPointX = self.frame.size.width - lineParModel!.outerCircleRadius * 2 - lineParModel!.outerCircleWidth
         let endPoint = CGPoint(x: endPointX, y: nowCenterY)
         
         var controlPoint = CGPoint(x: startPoint.x / 2 + endPoint.x / 2, y: startPoint.y / 2 + endPoint.y / 2)

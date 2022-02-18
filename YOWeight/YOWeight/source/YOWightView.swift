@@ -39,7 +39,7 @@ class YOWightView: UIView {
         wightLineView.otherLineParModel = YOWightOtherLineParameter()
         
         wightLineView.configUI()
-        
+        wightLineView.refreshCenterLine()
     }
     
     func refreshData(_ data: Array<Double>?){
@@ -47,6 +47,12 @@ class YOWightView: UIView {
             dataArr = data!
         }
         wightLineView.refreshData(dataArr)
+        
+    }
+    
+    /// 刷新数据
+    func refreshAvageLine(_ value: Double){
+        wightLineView.refreshAvageLine(value)
     }
     
     
@@ -58,7 +64,7 @@ struct YOWightLineParameter {
     /// 外圆的半径
     var outerCircleRadius = 6.0
     /// 外圆的宽度
-    var ourerCircleWidth = 2.0
+    var outerCircleWidth = 2.0
     /// 外圆的颜色
     var outCircleColor = UIColor.red
     
@@ -82,17 +88,17 @@ struct YOWightOtherLineParameter {
     /// 中间线的颜色
     var centerLineColor = UIColor.red
     /// 中间线的宽度
-    var centerLineWidth = 1
+    var centerLineWidth = 1.0
     
     /// 是否是虚线
     var isDottedLine = true
     /// 平均线的颜色
     var averageLineColor = UIColor.red
     /// 虚线宽度
-    var averageLineWidth = 1
+    var averageLineWidth = 1.0
     /// 每段线条的长度
-    var dottedWidth = 4
+    var dottedWidth = 6.0
     /// 虚线空白的长度
-    var blankWidth = 3
+    var blankWidth = 2.0
     
 }

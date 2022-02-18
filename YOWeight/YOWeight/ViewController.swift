@@ -11,12 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vi  = YOWightView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 120))
+        let vi  = YOWightView(frame: CGRect(x: 10, y: 200, width: UIScreen.main.bounds.width - 20, height: 120))
         view.addSubview(vi)
         
         var dataArr: Array<Double> = []
 
-        for _ in 0...100 { //正序
+        for _ in 0...20 { //正序
             let numberThree: Int = Int(arc4random_uniform(20))
             dataArr.append(Double(numberThree + 60))
             print(numberThree)
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         
         vi.refreshData(dataArr)
         
+        vi.refreshAvageLine(80)
     }
 
 
