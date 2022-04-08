@@ -17,6 +17,13 @@ class YOWightView: UIView {
     /// 体重数据
     private var dataArr: Array<Double> = []
     
+    /// 最高限
+    private var hightLine: Double = 0.0
+    
+    /// 最低线
+    private var lowLine: Double = 0.0
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configUI()
@@ -52,12 +59,7 @@ extension YOWightView{
     func refreshData(_ data: Array<Double>?){
         if data != nil{
             dataArr = data!
-            
             // TODO : 需要找出最大值和最小值，让数据区域中间的数据 ，同时修改平均值
-            
-            
-            let min = data!.min()
-            let max = data!.max()
         }
         wightLineView.refreshData(dataArr)
     }

@@ -67,7 +67,7 @@ extension YOWeightLineView{
     
     /// 刷新数据
     func refreshData(_ data: Array<Double>?){
-        if data == nil{
+        if data != nil{
             dataArr = data!
         }
         collectionView.reloadData()
