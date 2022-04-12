@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YOWeight"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A short description of YOWeight."
 
   # This description is used to generate tags and improve search results.
@@ -66,7 +66,7 @@ Pod::Spec.new do |spec|
 
   # spec.platform     = :ios
   spec.platform     = :ios, "9.0"
-
+  spec.swift_versions = '5'
   #  When using multiple platforms
   spec.ios.deployment_target = "9.0"
   # spec.osx.deployment_target = "10.7"
