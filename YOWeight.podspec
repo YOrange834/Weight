@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "YOWeight/YOWeight/source", "YOWeight/YOWeight/source/**/*.{h,m}"
-  spec.exclude_files = "YOWeight/YOWeight/source/Exclude"
+  spec.source_files  = "YOWeight/YOWeight/source", "YOWeight/YOWeight/source/**/*.swift"
+  # spec.exclude_files = "YOWeight/YOWeight/source/Exclude"
 
-  spec.public_header_files = "YOWeight/YOWeight/source/**/*.h"
+  # spec.public_header_files = "YOWeight/YOWeight/source/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,7 +117,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.framework  = "Foundation"
+  spec.framework  = "UIKit"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
